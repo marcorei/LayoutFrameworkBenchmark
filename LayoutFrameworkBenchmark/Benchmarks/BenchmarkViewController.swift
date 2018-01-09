@@ -24,6 +24,11 @@ class BenchmarkViewController: UITableViewController {
             return CollectionViewControllerFeedItemAutoLayoutView(data: data)
         }),
         
+        ViewControllerData(title: "Baya", factoryBlock: { viewCount in
+            let data = FeedItemData.generate(count: viewCount)
+            return CollectionViewControllerFeedItemBayaView(data: data)
+        }),
+        
         ViewControllerData(title: "FlexLayout", factoryBlock: { viewCount in
             let data = FeedItemData.generate(count: viewCount)
             return CollectionViewControllerFeedItemFlexLayoutView(data: data)
