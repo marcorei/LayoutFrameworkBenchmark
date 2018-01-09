@@ -13,9 +13,10 @@ target 'LayoutFrameworkBenchmark' do
 	pod 'LayoutKit'
   pod 'PinLayout'
   pod 'Reveal-SDK'
+  pod 'Baya'
 
   swift_32 = ['FlexLayout', 'PinLayout', 'Reveal-SDK']
-  swift4 = ['LayoutKit']
+  swift4 = ['LayoutKit', 'Baya']
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|
