@@ -138,10 +138,10 @@ class FeedItemBayaView: UIView, DataBinder {
     func createLayout() {
         let actionBar = [
             actionLabel,
-            optionsLabel.layoutGravitating(to: .right).layoutMatchingParentWidth()]
+            optionsLabel.layoutGravitating(to: .right)]
             .layoutAsFrame()
             .layoutMatchingParentWidth()
-        
+
         let posterDetails = [
             posterNameLabel,
             posterHeadlineLabel,
@@ -149,27 +149,24 @@ class FeedItemBayaView: UIView, DataBinder {
             .layoutLinearly(orientation: .vertical, spacing: 5)
         let posterCard = [
             posterImageView
-                .layoutGravitating(to: .centerY)
-                .layoutMatchingParentHeight(),
+                .layoutGravitating(to: .centerY),
             posterDetails]
             .layoutLinearly(orientation: .horizontal)
-        
+
         let ctaBar = [
             likeLabel,
             commentLabel
-                .layoutGravitating(to: .centerX)
-                .layoutMatchingParentWidth(),
+                .layoutGravitating(to: .centerX),
             shareLabel
-                .layoutGravitating(to: .right)
-                .layoutMatchingParentWidth()]
+                .layoutGravitating(to: .right)]
             .layoutAsFrame()
             .layoutMatchingParentWidth()
-        
+
         let actorBar = [
             actorImageView,
             actorCommentLabel]
             .layoutLinearly(orientation: .vertical)
-        
+
         layout = [
             actionBar,
             posterCard,
